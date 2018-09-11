@@ -43,12 +43,12 @@ spec:
         args: [
           "--http2_port=9000",
           "--backend=grpc://127.0.0.1:50051",
-          "--service=SERVICE_NAME",
+          "--service=my-cluster",
           "--rollout_strategy=managed",
         ]
         ports:
           - containerPort: 9000
       - name: python-grpc-hello
-        image: gcr.io/GCLOUD_PROJECT/python-grpc-hello:1.0
+        image: gcr.io/biz-truedata-kinoshita-test/python-grpc-hello:1.0
         ports:
           - containerPort: 50051
